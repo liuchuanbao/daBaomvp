@@ -1,5 +1,6 @@
 package cn.efarm360.com.dabaomvp.view;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.efarm360.com.dabaomvp.R;
+import cn.efarm360.com.dabaomvp.activity.TablayoutActivity;
+import cn.efarm360.com.dabaomvp.activity.ToolbarActivity;
 import cn.efarm360.com.dabaomvp.adapter.IWifiAdapter;
 import cn.efarm360.com.dabaomvp.bean.WifiBean;
 import cn.efarm360.com.dabaomvp.present.WifiPresenterImpl;
@@ -36,6 +39,15 @@ public class MainActivity extends AppCompatActivity implements IWifiView  {
     private void initView() {
         listView = (ListView) findViewById(R.id.list_item);
         btn_add= (Button) findViewById(R.id.tv_add);
+        btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,DaggerPersionActivity.class));
+//                startActivity(new Intent(MainActivity.this,ToolbarActivity.class));
+//                startActivity(new Intent(MainActivity.this,TablayoutActivity.class));
+            }
+        });
+
     }
 
     @Override
@@ -49,4 +61,6 @@ public class MainActivity extends AppCompatActivity implements IWifiView  {
     public void showSnackbar(View view) {
 
     }
+
+
 }
