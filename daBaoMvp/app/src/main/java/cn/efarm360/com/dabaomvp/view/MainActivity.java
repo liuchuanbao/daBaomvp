@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.efarm360.com.dabaomvp.R;
+import cn.efarm360.com.dabaomvp.activity.PictureLunBoActivity;
 import cn.efarm360.com.dabaomvp.activity.TablayoutActivity;
 import cn.efarm360.com.dabaomvp.activity.ToolbarActivity;
 import cn.efarm360.com.dabaomvp.adapter.IWifiAdapter;
@@ -42,9 +43,11 @@ public class MainActivity extends AppCompatActivity implements IWifiView  {
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,DaggerPersionActivity.class));
+//                startActivity(new Intent(MainActivity.this,DaggerPersionActivity.class));
 //                startActivity(new Intent(MainActivity.this,ToolbarActivity.class));
 //                startActivity(new Intent(MainActivity.this,TablayoutActivity.class));
+                startActivity(new Intent(MainActivity.this,PictureLunBoActivity.class));
+
             }
         });
 

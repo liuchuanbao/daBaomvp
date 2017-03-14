@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.efarm360.com.dabaomvp">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +23,10 @@
         <activity
             android:name=".activity.ToolbarActivity"
             android:theme="@style/BaseAppTheme" />
-        <activity android:name=".activity.TablayoutActivity"></activity>
+        <activity android:name=".activity.TablayoutActivity" />
+        <activity android:name=".activity.PictureLunBoActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            />
     </application>
 
 </manifest>
