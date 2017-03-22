@@ -24,9 +24,13 @@
             android:name=".activity.ToolbarActivity"
             android:theme="@style/BaseAppTheme" />
         <activity android:name=".activity.TablayoutActivity" />
-        <activity android:name=".activity.PictureLunBoActivity"
-            android:theme="@style/Theme.Design.Light.NoActionBar"
-            />
+        <activity
+            android:name=".activity.PictureLunBoActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".activity.SegmentGroupActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity android:name=".activity.LambdaActivity"></activity>
     </application>
 
 </manifest>

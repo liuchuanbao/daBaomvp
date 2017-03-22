@@ -15,14 +15,25 @@ public class ToolbarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_toolbar);
-//        setContentView(R.layout.header_just_username);
+//        setContentView(R.layout.activity_toolbar);
+        setContentView(R.layout.activity_toolbar_zidingyi);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.id_toolbar);
+//        setSupportActionBar(toolbar);
+//
+//        //StatusBarCompat.compat(this, 0xFFFF0000);
+//        StatusBarCompat.compat(this);
+
+//        toolbar.setLogo(R.drawable.ic_launcher);
+//// Title
+//        toolbar.setTitle("My Title");
+//// Sub Title
+//        toolbar.setSubtitle("Sub title");
         setSupportActionBar(toolbar);
 
-        //StatusBarCompat.compat(this, 0xFFFF0000);
-        StatusBarCompat.compat(this);
+// Navigation Icon 要設定在 setSupoortActionBar 才有作用
+// 否則會出現 back button
+//        toolbar.setNavigationIcon(R.drawable.banner2);
     }
 }

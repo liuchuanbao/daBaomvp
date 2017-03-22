@@ -60,4 +60,12 @@
         <!-- 自动轮播区域距离 BGABanner 底部的距离，用于使指示器区域与自动轮播区域不重叠 -->
         <attr name="banner_contentBottomMargin" format="dimension"/>
     </declare-styleable>
+
+    <!--SegmentedGroup自定义属性-->
+    <declare-styleable name="SegmentedGroup">
+        <attr name="sc_corner_radius" format="dimension" /><!--SegmentedGroup角度-->
+        <attr name="sc_border_width" format="dimension" /><!--SegmentedGroup边线宽度-->
+        <attr name="sc_tint_color" format="color" />
+        <attr name="sc_checked_text_color" format="color" />
+    </declare-styleable>
 </resources>

@@ -3,6 +3,7 @@ package cn.efarm360.com.dabaomvp.view;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import java.util.List;
 
 import cn.efarm360.com.dabaomvp.R;
 import cn.efarm360.com.dabaomvp.activity.PictureLunBoActivity;
+import cn.efarm360.com.dabaomvp.activity.SegmentGroupActivity;
 import cn.efarm360.com.dabaomvp.activity.TablayoutActivity;
 import cn.efarm360.com.dabaomvp.activity.ToolbarActivity;
 import cn.efarm360.com.dabaomvp.adapter.IWifiAdapter;
@@ -32,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements IWifiView  {
         setContentView(R.layout.activity_main);
 
         initView();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.id_toolbar);
+        setSupportActionBar(toolbar);
+
         mWifiPresenterImpl = new WifiPresenterImpl(this);
         adapter = new IWifiAdapter(this);
         mWifiPresenterImpl.onCreate();
@@ -46,7 +51,8 @@ public class MainActivity extends AppCompatActivity implements IWifiView  {
 //                startActivity(new Intent(MainActivity.this,DaggerPersionActivity.class));
 //                startActivity(new Intent(MainActivity.this,ToolbarActivity.class));
 //                startActivity(new Intent(MainActivity.this,TablayoutActivity.class));
-                startActivity(new Intent(MainActivity.this,PictureLunBoActivity.class));
+//                startActivity(new Intent(MainActivity.this,PictureLunBoActivity.class));
+                startActivity(new Intent(MainActivity.this,SegmentGroupActivity.class));
 
             }
         });
