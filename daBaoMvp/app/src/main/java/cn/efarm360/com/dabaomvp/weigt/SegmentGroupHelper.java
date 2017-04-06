@@ -8,10 +8,7 @@ import cn.efarm360.com.dabaomvp.R;
 
 
 /**
- * Description :
- *
- * @author : ZAZE
- * @version : 2016-06-07 - 13:29
+ *实现切换的button按钮
  */
 public class SegmentGroupHelper {
     public static RadioButton createRadioButton(Context context, int id, String name) {

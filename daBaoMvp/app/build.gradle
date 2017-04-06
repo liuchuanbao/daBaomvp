@@ -71,4 +71,9 @@ dependencies {
 
     //使用Gson
     compile 'com.google.code.gson:gson:2.6.2'
+   //弘扬封装的万能适配器 recycleView
+    compile 'com.zhy:base-rvadapter:3.0.3'
+
+
+
 }

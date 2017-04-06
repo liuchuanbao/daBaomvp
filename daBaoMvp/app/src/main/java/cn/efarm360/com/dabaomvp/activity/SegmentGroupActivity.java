@@ -15,6 +15,9 @@ import cn.efarm360.com.dabaomvp.weigt.SegmentedGroup;
 
 public class SegmentGroupActivity extends AppCompatActivity {
 
+    /**
+     * 自定义的仿qq标题栏切换的
+     */
     private SegmentedGroup mSegmentGroup;
     private ArrayList<String> mNames = new ArrayList<>();
 

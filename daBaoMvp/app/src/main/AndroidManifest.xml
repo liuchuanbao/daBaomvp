@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".activity.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -30,7 +31,12 @@
         <activity
             android:name=".activity.SegmentGroupActivity"
             android:theme="@style/BaseAppTheme" />
-        <activity android:name=".activity.LambdaActivity"></activity>
+        <activity android:name=".activity.LambdaActivity" />
+        <activity android:name=".activity.ViewDragHelperActivity" />
+        <activity android:name=".activity.UpViewActivity" />
+        <activity android:name=".activity.RecycleViewAdapterActivity" />
+        <activity android:name=".activity.MultiItemRvActivityActivity" />
+        <activity android:name=".activity.RecyclerActivity"></activity>
     </application>
 
 </manifest>
