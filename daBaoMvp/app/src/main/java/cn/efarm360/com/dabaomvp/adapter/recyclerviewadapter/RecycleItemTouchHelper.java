@@ -16,7 +16,7 @@ import cn.efarm360.com.dabaomvp.activity.MyApplication;
 
 
 /**
- * Created by xiehui on 2017/2/23.
+ * ItemTouchHelper.Callback 自定义实现ItemTouchHelper.Callback类；实现左划删除，长按移动
  */
 public class RecycleItemTouchHelper extends ItemTouchHelper.Callback{
     private static final String TAG ="RecycleItemTouchHelper" ;
@@ -129,10 +129,13 @@ public class RecycleItemTouchHelper extends ItemTouchHelper.Callback{
             Resources resources= MyApplication.getAppContext().getResources();
 
             Bitmap bitmap= BitmapFactory.decodeResource(resources, R.drawable.delete);//获取删除指示的背景图片
+
             int padding =10;//图片绘制的padding
             int maxDrawWidth=2*padding+bitmap.getWidth();//最大的绘制宽度
+
             Paint paint=new Paint();
             paint.setColor(resources.getColor(R.color.btninvalid));
+
             int x=Math.round(Math.abs(dX));
             int drawWidth=Math.min(x,maxDrawWidth);//实际的绘制宽度，取实时滑动距离x和最大绘制距离maxDrawWidth最小值
             int itemTop=itemView.getBottom()-itemView.getHeight();//绘制的top位置

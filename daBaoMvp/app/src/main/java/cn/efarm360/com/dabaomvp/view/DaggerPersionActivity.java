@@ -20,8 +20,9 @@ import cn.efarm360.com.dabaomvp.moudle.PersionModule;
 
 public class DaggerPersionActivity extends AppCompatActivity {
 
-                     @Inject   //标明需要注入的对象  这个对象是代替了new  对象名（）；
-                     Persion persion;
+            @Inject   //标明需要注入的对象  这个对象是代替了new  对象名（）；
+            Persion persion;
+
                TextView tvPersion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

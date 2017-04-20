@@ -14,7 +14,7 @@ import java.util.List;
 import cn.efarm360.com.dabaomvp.R;
 
 /**
- * Created by xiehui on 2017/2/21.
+ * Created by xiehui on 2017/2/21.  要继承 RecyclerView.Adapter<CustomAdapter.CustomeViewHolder>
  */
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomeViewHolder> implements RecycleItemTouchHelper.ItemTouchHelperCallback {
 
@@ -26,6 +26,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomeVie
         this.list = list;
     }
 
+    /**
+     *    填充view
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @Override
     public CustomeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -33,6 +39,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomeVie
         return new CustomeViewHolder(view);
     }
 
+    /**
+     * 绑定数据
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(CustomeViewHolder holder, int position) {
         holder.item_textView.setText(list.get(position));
@@ -55,6 +66,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomeVie
         notifyItemMoved(fromPosition,toPosition);
     }
 
+    /**
+     * viewholder
+     */
     public class CustomeViewHolder extends RecyclerView.ViewHolder {
 
 

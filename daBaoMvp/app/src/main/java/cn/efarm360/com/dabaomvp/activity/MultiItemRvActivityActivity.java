@@ -39,17 +39,18 @@ public class MultiItemRvActivityActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         mDatas.addAll(ChatMessage.MOCK_DATAS);
+
+
+
         ChatAdapterForRv adapter = new ChatAdapterForRv(this, mDatas);
 
         mLoadMoreWrapper = new LoadMoreWrapper(adapter);
         mLoadMoreWrapper.setLoadMoreView(LayoutInflater.from(this).inflate(R.layout.default_loading, mRecyclerView, false));
-        mLoadMoreWrapper.setOnLoadMoreListener(new LoadMoreWrapper.OnLoadMoreListener()
-        {
+        mLoadMoreWrapper.setOnLoadMoreListener(new LoadMoreWrapper.OnLoadMoreListener(){
             @Override
             public void onLoadMoreRequested()
             {
-                new Handler().postDelayed(new Runnable()
-                {
+                new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run()
                     {
