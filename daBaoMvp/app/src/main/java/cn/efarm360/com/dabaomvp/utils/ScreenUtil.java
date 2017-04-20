@@ -56,6 +56,7 @@ public class ScreenUtil {
 	
 	public static int getDisplayHeight() {
 		if(screenHeight == 0){
+			//使用的时候 需要在  在MyApplication中创建一个全局context的对象
 //            GetInfo(MyApplication.getInstance().getApplicationContext());
         }
 		return screenHeight;

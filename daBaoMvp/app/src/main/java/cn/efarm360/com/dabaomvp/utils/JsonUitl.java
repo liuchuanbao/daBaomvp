@@ -10,6 +10,8 @@ import java.util.List;
 
 /**
  * Created by liuchuanbao on 2017/1/19.
+ *
+ * json 的封装工具
  */
 
 public class JsonUitl {

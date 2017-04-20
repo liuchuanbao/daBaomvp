@@ -27,6 +27,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 
+/**
+ * 在线升级
+ */
 public class UpdateManager {
 
 	private Context mContext;
