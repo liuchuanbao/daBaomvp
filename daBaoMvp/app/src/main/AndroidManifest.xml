@@ -2,14 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.efarm360.com.dabaomvp">
 
-    <!--网络请求 wifi和internet-->
+    <!-- 网络请求 wifi和internet -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
-     <!--内存卡读写-->
+    <!-- 内存卡读写 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <!-- 添加蒙层的权限-->
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 添加蒙层的权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:name=".activity.MyApplication"
@@ -42,7 +43,8 @@
         <activity android:name=".activity.RecycleViewAdapterActivity" />
         <activity android:name=".activity.MultiItemRvActivityActivity" />
         <activity android:name=".activity.RecyclerActivity" />
-        <activity android:name=".activity.AddLayerActivity"></activity>
+        <activity android:name=".activity.AddLayerActivity" />
+        <activity android:name=".activity.ThirstDeffetActivitys"></activity>
     </application>
 
 </manifest>

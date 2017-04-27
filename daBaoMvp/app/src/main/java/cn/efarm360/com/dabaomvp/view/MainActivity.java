@@ -33,6 +33,7 @@ import cn.efarm360.com.dabaomvp.activity.RecycleViewAdapterActivity;
 import cn.efarm360.com.dabaomvp.activity.RecyclerActivity;
 import cn.efarm360.com.dabaomvp.activity.SegmentGroupActivity;
 import cn.efarm360.com.dabaomvp.activity.TablayoutActivity;
+import cn.efarm360.com.dabaomvp.activity.ThirstDeffetActivitys;
 import cn.efarm360.com.dabaomvp.activity.ToolbarActivity;
 import cn.efarm360.com.dabaomvp.activity.UpViewActivity;
 import cn.efarm360.com.dabaomvp.activity.ViewDragHelperActivity;
@@ -132,9 +133,10 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
 //                startActivity(new Intent(MainActivity.this,MultiItemRvActivityActivity.class));
 //                 实现recycle 的左划删除
 //                startActivity(new Intent(MainActivity.this,RecyclerActivity.class));
-                //   实现蒙层效果
-                startActivity(new Intent(MainActivity.this,AddLayerActivity.class));
-
+//                //   实现蒙层效果
+//                startActivity(new Intent(MainActivity.this,AddLayerActivity.class));
+                //   实现3d 效果
+                startActivity(new Intent(MainActivity.this,ThirstDeffetActivitys.class));
             }
         });
 
