@@ -47,17 +47,17 @@ public class ScreenUtil {
         return density;
     }
 	
-	public static int getDisplayWidth(){
+	public static int getDisplayWidth(Context context ){
 		if(screenWidth == 0){
-//			GetInfo(MyApplication.getInstance().getApplicationContext());
+			GetInfo(context);
 		}
 		return screenWidth;
 	}
 	
-	public static int getDisplayHeight() {
+	public static int getDisplayHeight(Context context) {
 		if(screenHeight == 0){
 			//使用的时候 需要在  在MyApplication中创建一个全局context的对象
-//            GetInfo(MyApplication.getInstance().getApplicationContext());
+            GetInfo(context);
         }
 		return screenHeight;
 	}

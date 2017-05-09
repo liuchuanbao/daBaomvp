@@ -20,6 +20,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,10 +32,12 @@ import cn.efarm360.com.dabaomvp.ZiDingYiview.TextViewClickableSpan;
 import cn.efarm360.com.dabaomvp.ZiDingYiview.VDHLinearLayout2;
 import cn.efarm360.com.dabaomvp.activity.AddLayerActivity;
 import cn.efarm360.com.dabaomvp.activity.MultiItemRvActivityActivity;
+import cn.efarm360.com.dabaomvp.activity.OpenLightActivity;
 import cn.efarm360.com.dabaomvp.activity.PictureLunBoActivity;
 import cn.efarm360.com.dabaomvp.activity.RecycleViewAdapterActivity;
 import cn.efarm360.com.dabaomvp.activity.RecyclerActivity;
 import cn.efarm360.com.dabaomvp.activity.SegmentGroupActivity;
+import cn.efarm360.com.dabaomvp.activity.SlideRecyclerViewActivity;
 import cn.efarm360.com.dabaomvp.activity.TablayoutActivity;
 import cn.efarm360.com.dabaomvp.activity.ThirstDeffetActivitys;
 import cn.efarm360.com.dabaomvp.activity.ToolbarActivity;
@@ -41,6 +47,7 @@ import cn.efarm360.com.dabaomvp.adapter.IWifiAdapter;
 import cn.efarm360.com.dabaomvp.bean.WifiBean;
 import cn.efarm360.com.dabaomvp.present.WifiPresenterImpl;
 import cn.efarm360.com.dabaomvp.utils.AddLayerUtil;
+import cn.efarm360.com.dabaomvp.utils.ToastUtil;
 
 public class MainActivity extends AppCompatActivity implements IWifiView ,TextViewClickableSpan.OnTextViewClickListener {
 
@@ -66,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
         initView();
         Toolbar toolbar = (Toolbar) findViewById(R.id.id_toolbar);
         setSupportActionBar(toolbar);
+
+        EventBus.getDefault().register(this);
 
         img = new ImageView(this);
 
@@ -104,6 +113,10 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
         });
 
     }
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onTest(String s){
+        ToastUtil.showToast(MainActivity.this,s);
+    }
 
     private void initView() {
         listView = (ListView) findViewById(R.id.list_item);
@@ -133,10 +146,14 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
 //                startActivity(new Intent(MainActivity.this,MultiItemRvActivityActivity.class));
 //                 实现recycle 的左划删除
 //                startActivity(new Intent(MainActivity.this,RecyclerActivity.class));
+                //                 实现recycle 的左右划删除
+                startActivity(new Intent(MainActivity.this,SlideRecyclerViewActivity.class));
 //                //   实现蒙层效果
 //                startActivity(new Intent(MainActivity.this,AddLayerActivity.class));
                 //   实现3d 效果
-                startActivity(new Intent(MainActivity.this,ThirstDeffetActivitys.class));
+//                startActivity(new Intent(MainActivity.this,ThirstDeffetActivitys.class));
+//                   实现开启闪光灯
+//                startActivity(new Intent(MainActivity.this,OpenLightActivity.class));
             }
         });
 
@@ -182,5 +199,11 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
     public void onTextViewClick(View view) {
                  //view实现拖拽功能
                 startActivity(new Intent(MainActivity.this,ViewDragHelperActivity.class));
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 }

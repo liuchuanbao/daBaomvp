@@ -41,6 +41,7 @@ public class RecycleViewFragment extends Fragment implements View.OnClickListene
         }
         adapter=new CustomAdapter(getActivity(),strings);
         recycleview.setAdapter(adapter);
+
         ItemTouchHelper.Callback callback=new RecycleItemTouchHelper(adapter);
         ItemTouchHelper itemTouchHelper=new ItemTouchHelper(callback);
         itemTouchHelper.attachToRecyclerView(recycleview);
