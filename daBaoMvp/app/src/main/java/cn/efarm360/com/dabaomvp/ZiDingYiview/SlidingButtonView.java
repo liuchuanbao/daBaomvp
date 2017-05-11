@@ -123,7 +123,7 @@ public class SlidingButtonView  extends HorizontalScrollView {
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
 
-                changeScrollx();   //这个操作是干什么的啊？
+                changeScrollx();   //这个操作是干什么的啊？滑动的时候结束的时候 固定布局
                 return true;
             default:
                 break;

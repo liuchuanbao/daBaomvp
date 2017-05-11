@@ -33,6 +33,7 @@ public class SlideRecyclerViewActivity extends AppCompatActivity implements Slid
         mRecyclerView.setAdapter(mSlidRecyclerViewAdapter);
        btnAll = (Button) findViewById(R.id.btn_all);
         btnCancle = (Button) findViewById(R.id.btn_cancle);
+
         btnAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
