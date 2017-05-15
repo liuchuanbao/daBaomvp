@@ -31,6 +31,9 @@ import cn.efarm360.com.dabaomvp.R;
 import cn.efarm360.com.dabaomvp.ZiDingYiview.TextViewClickableSpan;
 import cn.efarm360.com.dabaomvp.ZiDingYiview.VDHLinearLayout2;
 import cn.efarm360.com.dabaomvp.activity.AddLayerActivity;
+import cn.efarm360.com.dabaomvp.activity.CoordinatorLayoutTest.CoordinaterTestActivity;
+import cn.efarm360.com.dabaomvp.activity.CoordinatorLayoutTest.CoordinatorActivity;
+import cn.efarm360.com.dabaomvp.activity.CoordinatorLayoutTest.CoordinatorDemoActivity;
 import cn.efarm360.com.dabaomvp.activity.MultiItemRvActivityActivity;
 import cn.efarm360.com.dabaomvp.activity.OpenLightActivity;
 import cn.efarm360.com.dabaomvp.activity.PictureLunBoActivity;
@@ -147,13 +150,19 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
 //                 实现recycle 的左划删除
 //                startActivity(new Intent(MainActivity.this,RecyclerActivity.class));
                 //                 实现recycle 的左右划删除
-                startActivity(new Intent(MainActivity.this,SlideRecyclerViewActivity.class));
+//                startActivity(new Intent(MainActivity.this,SlideRecyclerViewActivity.class));
 //                //   实现蒙层效果
 //                startActivity(new Intent(MainActivity.this,AddLayerActivity.class));
                 //   实现3d 效果
 //                startActivity(new Intent(MainActivity.this,ThirstDeffetActivitys.class));
 //                   实现开启闪光灯
 //                startActivity(new Intent(MainActivity.this,OpenLightActivity.class));
+                //              协调布局 （CoordinatorLayout）的使用
+//                startActivity(new Intent(MainActivity.this,CoordinatorActivity.class));
+//                //              协调布局 （CoordinatorLayoutdemo）的使用
+//                startActivity(new Intent(MainActivity.this, CoordinatorDemoActivity.class));
+                //              协调布局 （CoordinatorLayoutdemo）的使用
+                startActivity(new Intent(MainActivity.this, CoordinaterTestActivity.class));
             }
         });
 

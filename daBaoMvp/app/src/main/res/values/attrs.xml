@@ -68,4 +68,12 @@
         <attr name="sc_tint_color" format="color" />
         <attr name="sc_checked_text_color" format="color" />
     </declare-styleable>
+    <!--coordintorLayout自定义属性-->
+    <declare-styleable name="AvatarImageBehavior">
+        <attr name="finalYPosition" format="dimension"/>
+        <attr name="startXPosition" format="dimension"/>
+        <attr name="startToolbarPosition" format="dimension"/>
+        <attr name="startHeight" format="dimension"/>
+        <attr name="finalHeight" format="dimension"/>
+    </declare-styleable>
 </resources>
