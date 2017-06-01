@@ -46,6 +46,7 @@ import cn.efarm360.com.dabaomvp.activity.ThirstDeffetActivitys;
 import cn.efarm360.com.dabaomvp.activity.ToolbarActivity;
 import cn.efarm360.com.dabaomvp.activity.UpViewActivity;
 import cn.efarm360.com.dabaomvp.activity.ViewDragHelperActivity;
+import cn.efarm360.com.dabaomvp.activity.recyclerView.RvSelectActivity;
 import cn.efarm360.com.dabaomvp.adapter.IWifiAdapter;
 import cn.efarm360.com.dabaomvp.bean.WifiBean;
 import cn.efarm360.com.dabaomvp.present.WifiPresenterImpl;
@@ -162,7 +163,12 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
 //                //              协调布局 （CoordinatorLayoutdemo）的使用
 //                startActivity(new Intent(MainActivity.this, CoordinatorDemoActivity.class));
                 //              协调布局 （CoordinatorLayoutdemo）的使用
-                startActivity(new Intent(MainActivity.this, CoordinaterTestActivity.class));
+//                startActivity(new Intent(MainActivity.this, CoordinaterTestActivity.class));
+                //              协调布局 （CoordinatorLayoutdemo）的使用
+                startActivity(new Intent(MainActivity.this, RvSelectActivity.class));
+
+
+
             }
         });
 

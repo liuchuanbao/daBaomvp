@@ -70,7 +70,10 @@
         <activity android:name=".activity.CoordinatorLayoutTest.IOActivityExample" />
         <activity android:name=".activity.CoordinatorLayoutTest.FlexibleSpaceExampleActivity" />
         <activity android:name=".activity.CoordinatorLayoutTest.MaterialUpConceptActivity" />
-        <activity android:name=".activity.CoordinatorLayoutTest.SwipeBehaviorExampleActivity"></activity>
+        <activity android:name=".activity.CoordinatorLayoutTest.SwipeBehaviorExampleActivity" />
+        <activity android:name=".activity.recyclerView.RvSelectActivity"
+            android:theme="@style/AppThemes"
+            />
     </application>
 
 </manifest>
