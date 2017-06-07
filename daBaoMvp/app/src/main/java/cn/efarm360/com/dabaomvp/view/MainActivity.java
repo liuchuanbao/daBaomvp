@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import cn.efarm360.com.dabaomvp.R;
 import cn.efarm360.com.dabaomvp.ZiDingYiview.TextViewClickableSpan;
 import cn.efarm360.com.dabaomvp.activity.ViewDragHelperActivity;
+import cn.efarm360.com.dabaomvp.activity.picture.SelectPictureActivity;
 import cn.efarm360.com.dabaomvp.activity.recyclerViewPindaoxuanze.RecyclerViewDingzhiActivity;
 import cn.efarm360.com.dabaomvp.activity.recyclerViewSelectMore.RvSelectActivity;
 import cn.efarm360.com.dabaomvp.adapter.IWifiAdapter;
@@ -147,9 +148,10 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
                 //              协调布局 （CoordinatorLayoutdemo）的使用
 //                startActivity(new Intent(MainActivity.this, RvSelectActivity.class));
 
-//              试下recycleView的拖拽与内容定制
-                startActivity(new Intent(MainActivity.this, RecyclerViewDingzhiActivity.class));
-
+////             recycleView的拖拽与内容定制
+//                startActivity(new Intent(MainActivity.this, RecyclerViewDingzhiActivity.class));
+//               打开相册选择图片或者拍照
+                startActivity(new Intent(MainActivity.this, SelectPictureActivity.class));
             }
         });
 
@@ -160,7 +162,6 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
      * 调用 ：  timer.start();
      *
      */
-
     private CountDownTimer timer = new CountDownTimer(60000, 1000) {
 
         @Override

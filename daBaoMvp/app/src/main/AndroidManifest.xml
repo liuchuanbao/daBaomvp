@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 内存卡读写 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <!-- 添加蒙层的权限 -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -16,6 +17,7 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.autofocus" />
+
 
     <application
         android:name=".activity.MyApplication"
@@ -76,8 +78,16 @@
             android:theme="@style/AppThemes" />
         <activity android:name=".activity.recyclerViewPindaoxuanze.RecyclerViewDingzhiActivity" />
         <activity android:name=".activity.recyclerViewPindaoxuanze.drag.DragActivity" />
-        <activity android:name=".activity.recyclerViewPindaoxuanze.ChannelActivity" />
-        <activity android:name=".activity.recyclerViewPindaoxuanze.Channel.ChannelActivity"></activity>
+        <activity android:name=".activity.recyclerViewPindaoxuanze.Channel.ChannelActivity" />
+        <activity android:name=".activity.picture.SelectPictureActivity"/>
+
+        <activity android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
+
+        <activity android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
     </application>
 
 </manifest>
