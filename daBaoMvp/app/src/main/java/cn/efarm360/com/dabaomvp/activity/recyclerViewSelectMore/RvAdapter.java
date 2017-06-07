@@ -1,4 +1,4 @@
-package cn.efarm360.com.dabaomvp.activity.recyclerView;
+package cn.efarm360.com.dabaomvp.activity.recyclerViewSelectMore;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

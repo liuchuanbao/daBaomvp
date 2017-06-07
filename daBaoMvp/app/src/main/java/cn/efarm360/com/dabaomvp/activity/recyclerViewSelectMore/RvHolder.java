@@ -1,4 +1,4 @@
-package cn.efarm360.com.dabaomvp.activity.recyclerView;
+package cn.efarm360.com.dabaomvp.activity.recyclerViewSelectMore;
 
 import android.annotation.TargetApi;
 import android.os.Build;

@@ -1,4 +1,4 @@
-package cn.efarm360.com.dabaomvp.activity.recyclerView;
+package cn.efarm360.com.dabaomvp.activity.recyclerViewSelectMore;
 
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
@@ -26,7 +26,7 @@ import java.util.Set;
 import cn.efarm360.com.dabaomvp.R;
 
 public class RvSelectActivity extends AppCompatActivity implements ActionMode.Callback {
-//    很常见效果也最容易被忽略的弹出框：ActionMode
+//    很常见效果也最容易被忽略的弹出框：ActionMode   多个item的选择
     private ActionMode actionMode;
     public Set<Integer> positionSet = new HashSet<>();
     private RvAdapter adapter;

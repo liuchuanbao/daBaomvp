@@ -27,4 +27,8 @@
     <!--RvSelectActivity 的使用-->
     <color name="btn_common_press_v21">#c7c7c7</color>
     <color name="btn_common_press_v16">#d7d7d7</color>
+    <!--channelActivity-->
+    <color name="tip">#9c9c9c</color>
+    <color name="bg_focus">#DDDDDD</color>
+    <color name="red_500">#ef4836</color>
 </resources>

@@ -1,17 +1,13 @@
 package cn.efarm360.com.dabaomvp.view;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerViewAccessibilityDelegate;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.Spanned;
-import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
@@ -25,28 +21,12 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import cn.efarm360.com.dabaomvp.R;
 import cn.efarm360.com.dabaomvp.ZiDingYiview.TextViewClickableSpan;
-import cn.efarm360.com.dabaomvp.ZiDingYiview.VDHLinearLayout2;
-import cn.efarm360.com.dabaomvp.activity.AddLayerActivity;
-import cn.efarm360.com.dabaomvp.activity.CoordinatorLayoutTest.CoordinaterTestActivity;
-import cn.efarm360.com.dabaomvp.activity.CoordinatorLayoutTest.CoordinatorActivity;
-import cn.efarm360.com.dabaomvp.activity.CoordinatorLayoutTest.CoordinatorDemoActivity;
-import cn.efarm360.com.dabaomvp.activity.MultiItemRvActivityActivity;
-import cn.efarm360.com.dabaomvp.activity.OpenLightActivity;
-import cn.efarm360.com.dabaomvp.activity.PictureLunBoActivity;
-import cn.efarm360.com.dabaomvp.activity.RecycleViewAdapterActivity;
-import cn.efarm360.com.dabaomvp.activity.RecyclerActivity;
-import cn.efarm360.com.dabaomvp.activity.SegmentGroupActivity;
-import cn.efarm360.com.dabaomvp.activity.SlideRecyclerViewActivity;
-import cn.efarm360.com.dabaomvp.activity.TablayoutActivity;
-import cn.efarm360.com.dabaomvp.activity.ThirstDeffetActivitys;
-import cn.efarm360.com.dabaomvp.activity.ToolbarActivity;
-import cn.efarm360.com.dabaomvp.activity.UpViewActivity;
 import cn.efarm360.com.dabaomvp.activity.ViewDragHelperActivity;
-import cn.efarm360.com.dabaomvp.activity.recyclerView.RvSelectActivity;
+import cn.efarm360.com.dabaomvp.activity.recyclerViewPindaoxuanze.RecyclerViewDingzhiActivity;
+import cn.efarm360.com.dabaomvp.activity.recyclerViewSelectMore.RvSelectActivity;
 import cn.efarm360.com.dabaomvp.adapter.IWifiAdapter;
 import cn.efarm360.com.dabaomvp.bean.WifiBean;
 import cn.efarm360.com.dabaomvp.present.WifiPresenterImpl;
@@ -165,9 +145,10 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
                 //              协调布局 （CoordinatorLayoutdemo）的使用
 //                startActivity(new Intent(MainActivity.this, CoordinaterTestActivity.class));
                 //              协调布局 （CoordinatorLayoutdemo）的使用
-                startActivity(new Intent(MainActivity.this, RvSelectActivity.class));
+//                startActivity(new Intent(MainActivity.this, RvSelectActivity.class));
 
-
+//              试下recycleView的拖拽与内容定制
+                startActivity(new Intent(MainActivity.this, RecyclerViewDingzhiActivity.class));
 
             }
         });
