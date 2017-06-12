@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import cn.efarm360.com.dabaomvp.R;
 import cn.efarm360.com.dabaomvp.ZiDingYiview.TextViewClickableSpan;
 import cn.efarm360.com.dabaomvp.activity.ViewDragHelperActivity;
+import cn.efarm360.com.dabaomvp.activity.picture.PicSelectActivity;
 import cn.efarm360.com.dabaomvp.activity.picture.SelectPictureActivity;
 import cn.efarm360.com.dabaomvp.activity.recyclerViewPindaoxuanze.RecyclerViewDingzhiActivity;
 import cn.efarm360.com.dabaomvp.activity.recyclerViewSelectMore.RvSelectActivity;
@@ -151,7 +152,9 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
 ////             recycleView的拖拽与内容定制
 //                startActivity(new Intent(MainActivity.this, RecyclerViewDingzhiActivity.class));
 //               打开相册选择图片或者拍照
-                startActivity(new Intent(MainActivity.this, SelectPictureActivity.class));
+//                startActivity(new Intent(MainActivity.this, SelectPictureActivity.class));
+                startActivity(new Intent(MainActivity.this, PicSelectActivity.class));
+
             }
         });
 

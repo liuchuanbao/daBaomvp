@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="cn.efarm360.com.dabaomvp">
 
     <!-- 网络请求 wifi和internet -->
@@ -7,7 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 内存卡读写 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <!-- 添加蒙层的权限 -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -18,6 +19,8 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.autofocus" />
 
+    <!-- 开启录音的权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:name=".activity.MyApplication"
@@ -79,15 +82,28 @@
         <activity android:name=".activity.recyclerViewPindaoxuanze.RecyclerViewDingzhiActivity" />
         <activity android:name=".activity.recyclerViewPindaoxuanze.drag.DragActivity" />
         <activity android:name=".activity.recyclerViewPindaoxuanze.Channel.ChannelActivity" />
-        <activity android:name=".activity.picture.SelectPictureActivity"/>
+        <activity android:name=".activity.picture.SelectPictureActivity" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".activity.picture.PicSelectActivity" />
 
-        <activity android:name="me.iwf.photopicker.PhotoPickerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.efarm360.com.dabaomvp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"
+                tools:replace="android:resource" />
+        </provider>
 
-        <activity android:name="me.iwf.photopicker.PhotoPagerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-
+        <activity android:name=".activity.record.RecordActivity"></activity>
     </application>
 
 </manifest>

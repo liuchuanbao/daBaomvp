@@ -30,19 +30,19 @@ public class ScreenUtil {
 		densityDpi = dm.densityDpi;
 	}
 
-	public static int dip2px(float dipValue) {
-		final float scale = ScreenUtil.getDisplayDensity();
+	public static int dip2px(float dipValue,Context context) {
+		final float scale = ScreenUtil.getDisplayDensity(context);
 		return (int) (dipValue * scale + 0.5f);
 	}
 
-	public static int px2dip(float pxValue) {
-		final float scale = ScreenUtil.getDisplayDensity();
+	public static int px2dip(float pxValue,Context context) {
+		final float scale = ScreenUtil.getDisplayDensity(context);
 		return (int) (pxValue / scale + 0.5f);
 	}
 
-    private static float getDisplayDensity() {
+    private static float getDisplayDensity(Context context) {
         if(density == 0){
-//            GetInfo(MyApplication.getInstance().getApplicationContext());
+           GetInfo(context);
         }
         return density;
     }

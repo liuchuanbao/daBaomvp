@@ -119,4 +119,10 @@
         <item name="actionBarSize">@dimen/actionBarSize</item>
         <item name="colorPrimaryDark">#CCa500</item>
     </style>
+    <!-- 动画样式 -->
+    <style name="AnimationBottomUp">
+        <item name="android:windowEnterAnimation">@anim/popwindow_animation_in</item>
+        <item name="android:windowExitAnimation">@anim/popwindow_animation_out</item>
+    </style>
+
 </resources>
