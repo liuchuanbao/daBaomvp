@@ -27,9 +27,9 @@ public class PictureLoadeActivity extends AppCompatActivity {
 
         /*获得合适的drawable资源*/
         BitmapFactory.Options opts = new BitmapFactory.Options();
-        opts.inJustDecodeBounds = true;
+        opts.inJustDecodeBounds = true;   //boolean inJustDecodeBounds——如果设置为true，不获取图片，不分配内存，但会返回图片的高宽度信息
 
-        BitmapFactory.decodeResource(getResources(), R.drawable.img1, opts);
+        BitmapFactory.decodeResource(getResources(), R.drawable.img1, opts);  //
         opts.inSampleSize = computeSampleSize(opts, -1, 500 * 500);
         opts.inJustDecodeBounds = false;
 

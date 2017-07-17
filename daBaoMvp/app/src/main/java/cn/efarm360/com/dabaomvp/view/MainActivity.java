@@ -24,8 +24,11 @@ import java.util.ArrayList;
 
 import cn.efarm360.com.dabaomvp.R;
 import cn.efarm360.com.dabaomvp.ZiDingYiview.TextViewClickableSpan;
+import cn.efarm360.com.dabaomvp.activity.VideoPlayView.MyViedeoPlayer2Activity;
+import cn.efarm360.com.dabaomvp.activity.VideoPlayView.MyViedeoPlayerActivity;
+import cn.efarm360.com.dabaomvp.activity.VideoPlayView.VideoLiveActivity;
 import cn.efarm360.com.dabaomvp.activity.ViewDragHelperActivity;
-import cn.efarm360.com.dabaomvp.activity.webservice.WebServiceActivity;
+import cn.efarm360.com.dabaomvp.activity.VideoPlayView.VidieoActivity;
 import cn.efarm360.com.dabaomvp.adapter.IWifiAdapter;
 import cn.efarm360.com.dabaomvp.bean.WifiBean;
 import cn.efarm360.com.dabaomvp.present.WifiPresenterImpl;
@@ -158,6 +161,16 @@ public class MainActivity extends AppCompatActivity implements IWifiView ,TextVi
 //                startActivity(new Intent(MainActivity.this, Bluetooth2Activity.class));
                 //  webservice请求数据
 //                startActivity(new Intent(MainActivity.this, WebServiceActivity.class));
+
+//                //  实现多张图片的淡入淡出的效果
+//                startActivity(new Intent(MainActivity.this, PictureLoadeActivity.class));
+                //  播放本地视频
+//                startActivity(new Intent(MainActivity.this, VidieoActivity.class));
+//                startActivity(new Intent(MainActivity.this, MyViedeoPlayerActivity.class));
+                startActivity(new Intent(MainActivity.this, MyViedeoPlayer2Activity.class));
+                //将视频设置为壁纸
+//                startActivity(new Intent(MainActivity.this, VideoLiveActivity.class));
+
             }
         });
 

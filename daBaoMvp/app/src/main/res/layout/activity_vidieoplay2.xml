@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+    <LinearLayout
+        android:id="@+id/lin_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="标题"
+        android:textSize="20sp"
+        />
+       <RelativeLayout
+           android:id="@+id/view_layout"
+           android:layout_width="match_parent"
+           android:layout_height="240dp">
+           <cn.efarm360.com.dabaomvp.activity.VideoPlayView.widget.CustomVideoView
+               android:id="@+id/videoView"
+               android:layout_width="match_parent"
+               android:layout_height="290dp" />
+           <include layout="@layout/layout_progress"/>
+
+           <LinearLayout
+               android:id="@+id/lin_controllbar"
+               android:layout_alignParentBottom="true"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="50dp">
+               <SeekBar
+                   android:id="@+id/sb_play"
+                   android:thumb="@null"
+                   android:progressDrawable="@drawable/seekbar_style2"
+                   android:layout_marginLeft="-20dp"
+                   android:layout_marginRight="-20dp"
+                    android:indeterminate="false"
+                   android:layout_width="match_parent"
+                   android:layout_height="5dp" />
+
+           <RelativeLayout
+               android:id="@+id/rl_kongzhi"
+               android:gravity="center_vertical"
+               android:background="#101010"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+                  <LinearLayout
+                      android:id="@+id/lin_Left"
+                      android:orientation="horizontal"
+                      android:gravity="center_vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_alignParentBottom="true"
+                      android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/img_pause"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/pause_btn_style"
+                            />
+                      <TextView
+                          android:id="@+id/tv_time_current"
+                          android:text="00:00:00"
+                          android:textColor="#ffffffff"
+                          android:textSize="14sp"
+                          android:layout_marginLeft="32dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" />
+                      <TextView
+                          android:text="/"
+                          android:textColor="#4c4c4c"
+                          android:textSize="14sp"
+                          android:layout_marginLeft="5dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" />
+                      <TextView
+                          android:id="@+id/tv_time_all"
+                          android:text="00:00:00"
+                          android:textColor="#4c4c4c"
+                          android:textSize="14sp"
+                          android:layout_marginLeft="5dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" />
+                  </LinearLayout>
+               <LinearLayout
+                   android:id="@+id/volue_layout"
+                   android:gravity="center_vertical|right"
+                   android:orientation="horizontal"
+                   android:layout_toRightOf="@+id/lin_Left"
+                   android:layout_alignParentRight="true"
+                   android:layout_width="10dp"
+                   android:layout_centerVertical="true"
+                   android:layout_height="wrap_content">
+                      <ImageView
+                          android:id="@+id/img_volume"
+                          android:visibility="gone"
+                          android:src="@drawable/volume"
+                          android:layout_width="25dp"
+                          android:layout_height="25dp" />
+                   <SeekBar
+                       android:id="@+id/sb_volume"
+                       android:visibility="gone"
+                       android:thumb="@null"
+                       android:progressDrawable="@drawable/seekbar_style"
+                       android:layout_marginLeft="-20dp"
+                       android:layout_marginRight="-20dp"
+                       android:indeterminate="false"
+                       android:layout_width="100dp"
+                       android:layout_height="5dp" />
+                       <View
+                           android:layout_width="1dp"
+                           android:layout_height="match_parent"
+                           android:layout_marginTop="5dp"
+                           android:layout_marginBottom="5dp"
+                           android:background="#1e1e1e"
+                           android:layout_marginLeft="32dp"
+                           />
+                   <ImageView
+                       android:layout_marginRight="16dp"
+                       android:layout_marginLeft="16dp"
+                       android:id="@+id/img_screen"
+                       android:background="@drawable/full_screen"
+                       android:layout_width="25dp"
+                       android:layout_height="25dp" />
+               </LinearLayout>
+           </RelativeLayout>
+           </LinearLayout>
+       </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="标题"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="标题"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="标题"
+        android:textSize="20sp"
+        />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/full_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

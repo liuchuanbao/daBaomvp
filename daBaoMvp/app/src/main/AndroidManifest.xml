@@ -5,6 +5,7 @@
 
     <!-- 网络请求 wifi和internet -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 内存卡读写 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -21,6 +22,15 @@
 
     <!-- 开启录音的权限 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许程序连接到已配对的蓝牙设备。 -->
+    <uses-permission android:name="Android.permission.BLUETOOTH" />
+    <!-- 允许程序发现和配对蓝牙设备。 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!--设置壁纸-->
+    <uses-permission android:name = "android.permission.SET_WALLPAPER"/>
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
 
     <application
         android:name=".activity.MyApplication"
@@ -103,7 +113,64 @@
                 tools:replace="android:resource" />
         </provider>
 
-        <activity android:name=".activity.record.RecordActivity"></activity>
+        <activity android:name=".activity.record.RecordActivity" />
+        <activity android:name=".activity.bluetooth.BluetoothActivity" />
+        <activity android:name=".activity.bluetooth.ClientActivity" />
+        <activity android:name=".activity.bluetooth.ServerActivity" />
+        <activity android:name=".activity.bluetooth.bluetooth2.Bluetooth2Activity" />
+        <!-- 广播接收 -->
+        <receiver android:name=".activity.bluetooth.bluetooth2.BluetoothReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
+                <action android:name="android.bluetooth.device.action.FOUND" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.bluetooth.llangyaerji.bluetoothErjiActivity" />
+        <activity android:name=".activity.webservice.WebServiceActivity" />
+        <activity android:name=".activity.picture.PictureLoadeActivity" />
+        <activity android:name=".activity.picture.ClipPictureActivity" />
+        <activity
+            android:name=".activity.VideoPlayView.VidieoActivity"
+            android:label="@string/title_activity_vidieo"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.VideoPlayView.MyViedeoPlayerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.VideoPlayView.MyViedeoPlayer2Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name=".activity.VideoPlayView.VideoLiveActivity"/>
+
+        <!-- 配置实时壁纸Service -->
+        <!--<service-->
+            <!--android:name=".activity.VideoPlayView.serverce.VideoLiveWallpaper"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:permission="android.permission.BIND_WALLPAPER"-->
+            <!--android:process=":wallpaper">-->
+            <!--&lt;!&ndash; 为实时壁纸配置intent-filter &ndash;&gt;-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.service.wallpaper.WallpaperService" />-->
+            <!--</intent-filter>-->
+            <!--&lt;!&ndash; 为实时壁纸配置meta-data &ndash;&gt;-->
+            <!--<meta-data-->
+                <!--android:name="android.service.wallpaper"-->
+                <!--android:resource="@xml/livewallpaper" />-->
+        <!--</service>-->
+        <!--<service-->
+            <!--android:name=".activity.VideoPlayView.serverce.CameraLiveWallpaper"-->
+            <!--android:label="app"-->
+            <!--android:permission="android.permission.BIND_WALLPAPER">-->
+
+            <!--<intent-filter>-->
+                <!--<action android:name="android.service.wallpaper.WallpaperService"/>-->
+            <!--</intent-filter>-->
+
+            <!--<meta-data-->
+                <!--android:name="android.service.wallpaper"-->
+                <!--android:resource="@xml/livewallpaper"/>-->
+        <!--</service>-->
+
     </application>
 
 </manifest>

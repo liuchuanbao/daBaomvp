@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wallpaper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:thumbnail="@mipmap/ic_launcher"
+    android:description ="@string/send"
+    android:settingsActivity="com.qwq.clocklivewallpaper.SettingsActivity"
+    />
+    <!--android:description  描述-->
+    <!--android:thumbnail  图标-->
+    <!--android:settingsActivity 指定一个Activity。系统会检测动态壁纸应用有没有此属性。-->
+    <!--如果有则和下方的图片显示效果一样（两个Button），点击下图中设定Button可跳转至指定的Activity（设置界面）。如果没有此属性，就只有一个设置壁纸Button。-->

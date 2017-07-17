@@ -73,7 +73,7 @@ public class PullDoorView extends RelativeLayout {
         WindowManager wm = (WindowManager) (mContext
                 .getSystemService(Context.WINDOW_SERVICE));
 
-
+//       类DisplayMetrics可以得到分辨率等信息
         DisplayMetrics dm = new DisplayMetrics();
         wm.getDefaultDisplay().getMetrics(dm);
         mScreenHeigh = dm.heightPixels;
@@ -102,6 +102,7 @@ public class PullDoorView extends RelativeLayout {
     // 推动门的动画
     public void startBounceAnim(int startY, int dy, int duration) {
         mScroller.startScroll(0, startY, 0, dy, duration);
+        //重绘view
         invalidate();
     }
 

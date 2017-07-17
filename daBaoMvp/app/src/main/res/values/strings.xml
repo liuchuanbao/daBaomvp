@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">daBaoMvp</string>
-        <string name="desc" formatted="false">王思聪自小被送到国外，在新加坡Swiss Cottage读小学，在英国Winchester College读中学，后在英国University College London读大学。从英国归来，王思聪担任了万达集团的董事，但并不负责任何事务。
+    <string name="desc" formatted="false">王思聪自小被送到国外，在新加坡Swiss Cottage读小学，在英国Winchester College读中学，后在英国University College London读大学。从英国归来，王思聪担任了万达集团的董事，但并不负责任何事务。
 王健林拿出5亿元，让儿子成立了一家PE基金普思投资，任由其自己投资练手[8]  。普思投资首期5亿人民币的基金已经投资了4个项目：环球数码、云游控股、九好集团和无锡海古德新技术有限公司[9]  。
 2010年底，万达公司实际控制人王健林作价“1元”转让给儿子王思聪万达院线500万股，同时王思聪持有大连合兴投资2%股份（王健林持有98%），折算后王思聪透过大连合兴投资间接持有万达院线约1%股份。两者相加，王思聪持有万达院线约1000万股[2]  。
 2011年4月4日凌晨，王思聪在其微博撰文声称，张兰此前所谓“大S婚礼饭店（希尔顿逸林酒店）是王健林免费赞助”之说纯属造谣[10]  ，之后炮轰张兰造谣不值得尊重[10]  。
@@ -56,7 +56,7 @@
     <!--aliquet quis orci. Curabitur maximus augue ut bibendum sagittis.-->
     <!--</string>-->
 
-	<string name="about">
+    <string name="about">
 		This example shows different CoordinatorLayout usage examples, like the use of \'anchor\' in views,
 		flexible space and some more tips.\n\n
 
@@ -74,4 +74,20 @@
     <string name="other_channel">其他频道</string>
     <string name="edit">编辑</string>
     <string name="finish">完成</string>
+
+    <!--蓝牙所用到-->
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="client">客户端</string>
+    <string name="server">服务端</string>
+    <string name="btn_blth_connect">连接设备</string>
+    <string name="btn_blth_visiblity">设置蓝牙可见性</string>
+    <string name="btn_blth_disconnect">断开连接</string>
+    <string name="connect_state">状态</string>
+    <string name="progress_scaning">正在扫描</string>
+    <string name="progress_connecting">正在连接</string>
+    <string name="send">发送</string>
+    <string name="write_tip">请输入数字、字母或汉字</string>
+    <string name="bluetooth_unopened">蓝牙未开启，请先开启蓝牙</string>
+    <string name="title_activity_vidieo">VidieoActivity</string>
 </resources>
