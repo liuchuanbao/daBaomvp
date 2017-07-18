@@ -142,6 +142,10 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
         <activity android:name=".activity.VideoPlayView.VideoLiveActivity"/>
 
+        <activity android:name=".stickydecoration.view.PowerfulStickyRecyclerViewActivity"/>
+        <activity android:name=".stickydecoration.view.BeautifulRecyclerViewActivity"/>
+        <activity android:name=".stickydecoration.view.StickyRecyclerViewActivity"/>
+
         <!-- 配置实时壁纸Service -->
         <!--<service-->
             <!--android:name=".activity.VideoPlayView.serverce.VideoLiveWallpaper"-->
